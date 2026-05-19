@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leshko Studio — Салон Макіяжу</title>
+  <link rel="shortcut icon" href="./icons/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ГОРИЗОНТАЛЬНЕ МЕНЮ -->
+<nav class="top-nav">
+  <a href="index.html" class="nav-logo">Leshko<span>Studio</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="./pages/about.html">Про нас</a></li>
+    <li><a href="./pages/services.html">Послуги</a></li>
+    <li><a href="./pages/gallery.html">Галерея</a></li>
+    <li><a href="./pages/team.html">Майстри</a></li>
+    <li><a href="./pages/shop.html">Магазин</a></li>
+    <li><a href="./pages/blog.html">Блог</a></li>
+    <li><a href="./pages/contact.html">Контакти</a></li>
+    <li><a href="./pages/register.html" class="btn btn-primary" style="padding:8px 18px">Записатись</a></li>
+  </ul>
+  <div class="burger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-wrapper">
+  <!-- ВЕРТИКАЛЬНЕ МЕНЮ -->
+  <aside class="sidebar">
+    <div class="sidebar-title">Навігація</div>
+    <nav class="sidebar-nav">
+      <a href="index.html"><span class="icon"></span>Головна</a>
+      <a href="./pages/about.html"><span class="icon"></span>Про нас</a>
+      <a href="./pages/services.html"><span class="icon"></span>Послуги</a>
+      <a href="./pages/gallery.html"><span class="icon"></span>Галерея</a>
+      <a href="./pages/team.html"><span class="icon"></span>Майстри</a>
+      <a href="./pages/shop.html"><span class="icon"></span>Магазин</a>
+      <a href="./pages/blog.html"><span class="icon"></span>Блог</a>
+      <a href="./pages/contact.html"><span class="icon"></span>Контакти</a>
+      <a href="./pages/booking.html"><span class="icon"></span>Запис</a>
+    </nav>
+    <div class="sidebar-social">
+      <a href="https://instagram.com/makeup_ivankaaa" target="_blank" title="Instagram"><img src="./icons/insta.png" alt="instagram"></a>
+      <a href="https://www.facebook.com/ivanna.lesko.831217?locale=uk_UA" target="_blank" title="Facebook"><img src="./icons/facebook.png" alt="facebook"></a>
+      <a href="https://t.me/Ivanka_Leshko" target="_blank" title="Telegram"><img src="./icons/telegram.png" alt="telegram"></a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+
+    <!-- HERO З ВІДЕО НА ФОНІ -->
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="./images/IMG_9770.MOV" type="video/mp4"/>
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Преміум салон макіяжу · Стрий</p>
+        <h1 class="hero-title">Мистецтво<br/><em>краси & стилю</em></h1>
+        <p class="hero-subtitle">Розкрийте свою справжню красу разом із нашими майстрами.<br/>Макіяж, догляд, перетворення — все для вашого сяяння.</p>
+        <a href="./pages/booking.html" class="btn btn-primary hero-cta">Записатись на прийом </a>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section-sm section-smoke">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:32px;max-width:900px;margin:0 auto;text-align:center">
+        <div class="fade-up">
+          <div style="font-size:2rem;margin-bottom:12px"></div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-bottom:8px">Денний макіяж</h3>
+          <p style="font-size:0.82rem;color:var(--light-text)">Легкий, природній та витончений образ для щоденного життя</p>
+        </div>
+        <div class="fade-up">
+          <div style="font-size:2rem;margin-bottom:12px"></div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-bottom:8px">Вечірній макіяж</h3>
+          <p style="font-size:0.82rem;color:var(--light-text)">Розкішний та яскравий образ для особливих подій</p>
+        </div>
+        <div class="fade-up">
+          <div style="font-size:2rem;margin-bottom:12px"></div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-bottom:8px">Весільний макіяж</h3>
+          <p style="font-size:0.82rem;color:var(--light-text)">Незабутній образ для найважливішого дня вашого життя</p>
+        </div>
+        <div class="fade-up">
+          <div style="font-size:2rem;margin-bottom:12px"></div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-bottom:8px">Догляд за шкірою</h3>
+          <p style="font-size:0.82rem;color:var(--light-text)">Професійні процедури для сяючої та здорової шкіри</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОСЛУГИ -->
+    <section class="section">
+      <div class="section-header fade-up">
+        <p class="section-label">Що ми пропонуємо</p>
+        <h2 class="section-title">Наші <em>послуги</em></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="cards-grid">
+        <div class="card fade-up">
+          <div class="card-img">
+            <img src="./images/4.jpg" alt="Денний макіяж"/>
+          </div>
+          <div class="card-body">
+            <p class="card-label">Макіяж</p>
+            <h3 class="card-title">Денний макіяж</h3>
+            <p class="card-text">Легкий, свіжий образ, що підкреслить вашу природну красу та триматиметься весь день.</p>
+            <p class="card-price">від 600 грн</p>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <div class="card-img">
+            <img src="./images/6.jpg" alt="Вечірній макіяж"/>
+          </div>
+          <div class="card-body">
+            <p class="card-label">Макіяж</p>
+            <h3 class="card-title">Вечірній макіяж</h3>
+            <p class="card-text">Розкішний образ зі стійкими пігментами, ідеальний для вечірок та урочистостей.</p>
+            <p class="card-price">від 900 грн</p>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <div class="card-img">
+            <img src="./images/sviat.jpg" alt="Святковий макіяж"/>
+          </div>
+          <div class="card-body">
+            <p class="card-label">Cвято</p>
+            <h3 class="card-title">Святковий макіяж</h3>
+            <p class="card-text">Бездоганний, довготривалий образ для вашого святкового дня, який збережеться на фото.</p>
+            <p class="card-price">від 1 000 грн</p>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <div class="card-img">
+            <img src="./images/ves.jpg" alt="Весільний макіяж"/>
+          </div>
+          <div class="card-body">
+            <p class="card-label">Весілля</p>
+            <h3 class="card-title">Весільний макіяж</h3>
+            <p class="card-text">Бездоганний, довготривалий образ для вашого особливого дня, який збережеться на фото.</p>
+            <p class="card-price">від 1 500 грн</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px">
+        <a href="services.html" class="btn btn-outline">Всі послуги </a>
+      </div>
+    </section>
+
+    <!-- PROMO BANNER -->
+    <div class="promo-banner fade-up">
+      <h2>Перший візит — знижка <em style="color:var(--rose)">20%</em></h2>
+      <p>Запишіться онлайн та отримайте спеціальну пропозицію для нових клієнтів</p>
+      <a href="./pages/booking.html" class="btn btn-outline-white">Скористатись пропозицією</a>
+    </div>
+
+    <!-- ВІДГУКИ -->
+    <section class="section section-smoke">
+      <div class="section-header fade-up">
+        <p class="section-label">Що кажуть клієнти</p>
+        <h2 class="section-title">Відгуки</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card fade-up">
+          <p class="review-text">Абсолютно закохана в роботу майстрині Іванни! Весільний макіяж протримався весь день і виглядав бездоганно на фото. Дякую Leshko Studio!</p>
+          <div class="review-author">
+            <div class="review-avatar">Л</div>
+            <div>
+              <p class="review-name">Людмила Лешко</p>
+              <p class="review-stars">★★★★★</p>
+            </div>
+          </div>
+        </div>
+        <div class="review-card fade-up">
+          <p class="review-text">Прийшла на вечірній макіяж перед корпоративом — результат перевершив усі очікування. Майстер підібрала ідеальний образ саме для мене.</p>
+          <div class="review-author">
+            <div class="review-avatar">М</div>
+            <div>
+              <p class="review-name">Марія Павліш</p>
+              <p class="review-stars">★★★★★</p>
+            </div>
+          </div>
+        </div>
+        <div class="review-card fade-up">
+          <p class="review-text">Затишна атмосфера, уважний персонал та чудовий результат. Приходжу вже втретє і завжди задоволена. Рекомендую всім!</p>
+          <div class="review-author">
+            <div class="review-avatar">Ю</div>
+            <div>
+              <p class="review-name">Юлія Турчин</p>
+              <p class="review-stars">★★★★★</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СТАТИСТИКА -->
+    <section class="section section-dark">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:40px;text-align:center">
+        <div class="fade-up">
+          <p class="stat-num" data-count="1200" data-suffix="+">0+</p>
+          <p class="stat-label">Задоволених клієнтів</p>
+        </div>
+        <div class="fade-up">
+          <p class="stat-num" data-count="5" data-suffix="">0</p>
+          <p class="stat-label">Майстрів</p>
+        </div>
+        <div class="fade-up">
+          <p class="stat-num" data-count="5" data-suffix="">0</p>
+          <p class="stat-label">Років досвіду</p>
+        </div>
+        <div class="fade-up">
+          <p class="stat-num" data-count="50" data-suffix="+">0+</p>
+          <p class="stat-label">Видів послуг</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВІДЕО РОЗДІЛ -->
+    <section class="section">
+      <div class="section-header fade-up">
+        <p class="section-label">Дивіться як ми працюємо</p>
+        <h2 class="section-title">Наше <em>відео</em></h2>
+        <div class="section-line"></div>
+      </div>
+      <div style="max-width:800px; margin:0 auto; width: 100%; aspect-ratio:16/9; position: relative;">
+        <video 
+          controls 
+          playsinline
+          preload="metadata"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid rgba(201,162,126,0.2); object-fit: cover;">
+          
+          <!-- ПРАВИЛЬНИЙ ТИП ДЛЯ MP4 -->
+          <source src="./images/IMG_9785.mp4" type="video/mp4">
+          
+          Ваш браузер не підтримує відтворення цього відео.
+        </video>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="logo">Leshko Studio</p>
+          <p>Преміум салон краси у серці Стрия. Ми створюємо образи, що надихають і залишаються в пам'яті.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Послуги</h4>
+          <ul>
+            <li><a href="./pages/services.html">Денний макіяж</a></li>
+            <li><a href="./pages/services.html">Вечірній макіяж</a></li>
+            <li><a href="./pages/services.html">Весільний макіяж</a></li>
+            <li><a href="./pages/services.html">Догляд за шкірою</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Навігація</h4>
+          <ul>
+            <li><a href="./pages/about.html">Про нас</a></li>
+            <li><a href="./pages/gallery.html">Галерея</a></li>
+            <li><a href="./pages/team.html">Майстри</a></li>
+            <li><a href="./pages/blog.html">Блог</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Контакти</h4>
+          <ul>
+            <li><a href="tel:+380441234567">+38 (050) 715-33-79</a></li>
+            <li><a href="mailto:info@leshkostudio.ua">info@leshkostudio.ua</a></li>
+            <li><a href="#">вул. Коцюбинського, 53, Стрий</a></li>
+            <li><a href="./pages/contact.html">Написати нам</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Leshko Studio. Всі права захищено.</p>
+        <p>Розроблено з ❤ для краси</p>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <button class="lightbox-close">✕</button>
+  <img src="" alt=""/>
+</div>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top">↑</button>
+
+<!-- NOTIFICATION -->
+<div id="notification" class="notification"></div>
+
+<!-- COOKIE -->
+<div id="cookieBanner" class="cookie-banner">
+  <p>Ми використовуємо <a href="#">cookie</a> для покращення роботи сайту.</p>
+  <button id="cookieAccept" class="btn btn-primary" style="white-space:nowrap;padding:8px 20px">Прийняти</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

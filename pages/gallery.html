@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Галерея — Leshko Studio</title>
+  <link rel="shortcut icon" href="../icons/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../style.css"/>
+  <style>
+    .filter-btn {
+      padding: 9px 22px;
+      border: 1px solid rgba(201,162,126,0.3);
+      background: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: var(--light-text);
+      transition: all .3s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--rose);
+      border-color: var(--rose);
+      color: var(--deep);
+    }
+    .filter-bar { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
+  </style>
+</head>
+<body>
+<nav class="top-nav">
+  <a href="../index.html" class="nav-logo">Leshko<span>Studio</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Головна</a></li>
+    <li><a href="./about.html">Про нас</a></li>
+    <li><a href="./services.html">Послуги</a></li>
+    <li><a href="./gallery.html">Галерея</a></li>
+    <li><a href="./team.html">Майстри</a></li>
+    <li><a href="./shop.html">Магазин</a></li>
+    <li><a href="./blog.html">Блог</a></li>
+    <li><a href="./contact.html">Контакти</a></li>
+    <li><a href="./booking.html" class="btn btn-primary" style="padding:8px 18px">Записатись</a></li>
+  </ul>
+  <div class="burger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-wrapper">
+  <aside class="sidebar">
+    <div class="sidebar-title">Навігація</div>
+    <nav class="sidebar-nav">
+      <a href="../index.html"><span class="icon"></span>Головна</a>
+      <a href="./about.html"><span class="icon"></span>Про нас</a>
+      <a href="./services.html"><span class="icon"></span>Послуги</a>
+      <a href="./gallery.html"><span class="icon"></span>Галерея</a>
+      <a href="./team.html"><span class="icon"></span>Майстри</a>
+      <a href="./shop.html"><span class="icon"></span>Магазин</a>
+      <a href="./blog.html"><span class="icon"></span>Блог</a>
+      <a href="./contact.html"><span class="icon"></span>Контакти</a>
+      <a href="./booking.html"><span class="icon"></span>Запис</a>
+    </nav>
+<div class="sidebar-social">
+      <a href="https://instagram.com/makeup_ivankaaa" target="_blank" title="Instagram"><img src="../icons/insta.png" alt="instagram"></a>
+      <a href="https://www.facebook.com/ivanna.lesko.831217?locale=uk_UA" target="_blank" title="Facebook"><img src="../icons/facebook.png" alt="facebook"></a>
+      <a href="https://t.me/Ivanka_Leshko" target="_blank" title="Telegram"><img src="../icons/telegram.png" alt="telegram"></a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-hero">
+      <p class="eyebrow">Портфоліо</p>
+      <h1>Наша <em style="font-style:italic;color:var(--rose)">Галерея</em></h1>
+      <p>Перегляньте кращі роботи майстрів Leshko Studio</p>
+    </div>
+    <div class="breadcrumb">
+      <a href="../index.html">Головна</a><span>›</span> Галерея
+    </div>
+
+    <section class="section">
+      <div class="filter-bar fade-up">
+        <button class="filter-btn active" data-filter="all">Всі роботи</button>
+        <button class="filter-btn" data-filter="day">Денний</button>
+        <button class="filter-btn" data-filter="evening">Вечірній</button>
+        <button class="filter-btn" data-filter="wedding">Весільний</button>
+        <button class="filter-btn" data-filter="care">Догляд</button>
+      </div>
+
+      <div class="gallery-grid fade-up">
+
+        <div class="gallery-item wide gallery-filterable" data-cat="wedding"
+          data-lightbox="../images/ves.jpg">
+          <img src="../images/ves.jpg" alt="Весільний макіяж"/>
+          <div class="gallery-overlay"><span></span></div>
+        </div>
+
+        <div class="gallery-item gallery-filterable" data-cat="evening"
+          data-lightbox="../images/3.jpg">
+          <img src="../images/3.jpg" alt="Вечірній макіяж"/>
+          <div class="gallery-overlay"><span></span></div>
+        </div>
+
+        <div class="gallery-item gallery-filterable" data-cat="day"
+          data-lightbox="../images/4.jpg">
+          <img src="../images/4.jpg" alt="Денний макіяж"/>
+          <div class="gallery-overlay"><span></span></div>
+        </div>
+
+        <div class="gallery-item tall gallery-filterable" data-cat="evening"
+          data-lightbox="../images/8.jpg">
+          <img src="../images/8.jpg" alt="Смоки айс" style="height:100%;object-fit:cover"/>
+          <div class="gallery-overlay"><span></span></div>
+        </div>
+
+        <div class="gallery-item gallery-filterable" data-cat="day"
+          data-lightbox="../images/7.jpg">
+          <img src="../images/7.jpg" alt="Натуральний макіяж"/>
+          <div class="gallery-overlay"><span></span></div>
+        </div>
+
+        <div class="gallery-item gallery-filterable" data-cat="care"
+          data-lightbox="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop" alt="Догляд"/>
+          <div class="gallery-overlay"><span></span></div>
+        </div>
+
+        <div class="gallery-item wide gallery-filterable" data-cat="wedding"
+          data-lightbox="../images/10.jpg">
+          <img src="../images/10.jpg" alt="Весільний образ"/>
+          <div class="gallery-overlay"><span></span></div>
+        </div>
+
+        <div class="gallery-item gallery-filterable" data-cat="evening"
+          data-lightbox="../images/9.jpg">
+          <img src="../images/9.jpg" alt="Яскравий образ"/>
+          <div class="gallery-overlay"><span></span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Відео в галереї -->
+<div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap" class="fade-up">
+  <div style="width:460px;max-width:100%">
+    <video controls width="100%"
+      style="aspect-ratio:16/9;border:1px solid rgba(201,162,126,0.2);display:block;background:#000">
+      <source src="../images/IMG_9770.MOV" type="video/mp4"/>
+    </video>
+    <p style="font-size:0.82rem;color:var(--light-text);margin-top:10px;text-align:center">Вечірній макіяж — покрокове відео</p>
+  </div>
+  <div style="width:460px;max-width:100%">
+    <video controls width="100%"
+      style="aspect-ratio:16/9;border:1px solid rgba(201,162,126,0.2);display:block;background:#000">
+      <source src="../images/IMG_9785.mp4" type="video/mp4"/>
+    </video>
+    <p style="font-size:0.82rem;color:var(--light-text);margin-top:10px;text-align:center">Весільний макіяж — репетиція образу</p>
+  </div>
+</div>
+
+<footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="logo">Leshko Studio</p>
+          <p>Преміум салон краси у серці Стрия. Ми створюємо образи, що надихають і залишаються в пам'яті.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Послуги</h4>
+          <ul>
+            <li><a href="./services.html">Денний макіяж</a></li>
+            <li><a href="./services.html">Вечірній макіяж</a></li>
+            <li><a href="./services.html">Весільний макіяж</a></li>
+            <li><a href="./services.html">Догляд за шкірою</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Навігація</h4>
+          <ul>
+            <li><a href="./about.html">Про нас</a></li>
+            <li><a href="./gallery.html">Галерея</a></li>
+            <li><a href="./team.html">Майстри</a></li>
+            <li><a href="./blog.html">Блог</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Контакти</h4>
+          <ul>
+            <li><a href="tel:+380441234567">+38 (050) 715-33-79</a></li>
+            <li><a href="mailto:info@leshkotudio.ua">info@leshkostudio.ua</a></li>
+            <li><a href="#">вул. Коцюбинського, 53, Стрий</a></li>
+            <li><a href="./contact.html">Написати нам</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Leshko Studio. Всі права захищено.</p>
+        <p>Розроблено з ❤ для краси</p>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<div id="lightbox" class="lightbox"><button class="lightbox-close">✕</button><img src="" alt=""/></div>
+<button class="scroll-top">↑</button>
+<div id="notification" class="notification"></div>
+<div id="cookieBanner" class="cookie-banner">
+  <p>Ми використовуємо <a href="#">cookie</a>.</p>
+  <button id="cookieAccept" class="btn btn-primary" style="padding:8px 20px">Прийняти</button>
+</div>
+<script src="../main.js"></script>
+</body>
+</html>

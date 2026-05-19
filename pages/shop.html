@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Магазин — Leshko Studio</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="shortcut icon" href="../icons/logo.png" type="image/x-icon">
+  <style>
+    .qty-control { display:flex; align-items:center; gap:10px; margin:12px 0; }
+    .qty-btn { width:30px;height:30px;border:1px solid rgba(201,162,126,0.3);background:none;font-size:1.1rem;cursor:pointer;color:var(--rose);display:flex;align-items:center;justify-content:center;transition:all .3s; }
+    .qty-btn:hover { background:var(--rose);color:var(--deep); }
+    .qty-input { width:50px;text-align:center;border:1px solid rgba(201,162,126,0.2);padding:5px;font-family:'Montserrat',sans-serif;font-size:0.9rem;color:var(--text); }
+    .badge { display:inline-block;padding:3px 10px;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px; }
+    .badge-new { background:var(--rose);color:var(--deep); }
+    .badge-sale { background:#c0392b;color:white; }
+    .badge-hit { background:var(--gold);color:var(--deep); }
+  </style>
+</head>
+<body>
+<nav class="top-nav">
+  <a href="../index.html" class="nav-logo">Leshko<span>Studio</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Головна</a></li>
+    <li><a href="./about.html">Про нас</a></li>
+    <li><a href="./services.html">Послуги</a></li>
+    <li><a href="./gallery.html">Галерея</a></li>
+    <li><a href="./team.html">Майстри</a></li>
+    <li><a href="./shop.html">Магазин</a></li>
+    <li><a href="./blog.html">Блог</a></li>
+    <li><a href="./contact.html">Контакти</a></li>
+    <li><a href="./booking.html" class="btn btn-primary" style="padding:8px 18px">Записатись</a></li>
+  </ul>
+  <div class="burger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-wrapper">
+  <aside class="sidebar">
+    <div class="sidebar-title">Навігація</div>
+    <nav class="sidebar-nav">
+      <a href="../index.html"><span class="icon"></span>Головна</a>
+      <a href="./about.html"><span class="icon"></span>Про нас</a>
+      <a href="./services.html"><span class="icon"></span>Послуги</a>
+      <a href="./gallery.html"><span class="icon"></span>Галерея</a>
+      <a href="./team.html"><span class="icon"></span>Майстри</a>
+      <a href="./shop.html"><span class="icon"></span>Магазин</a>
+      <a href="./blog.html"><span class="icon"></span>Блог</a>
+      <a href="./contact.html"><span class="icon"></span>Контакти</a>
+      <a href="./booking.html"><span class="icon"></span>Запис</a>
+    </nav>
+<div class="sidebar-social">
+      <a href="https://instagram.com/makeup_ivankaaa" target="_blank" title="Instagram"><img src="../icons/insta.png" alt="instagram"></a>
+      <a href="https://www.facebook.com/ivanna.lesko.831217?locale=uk_UA" target="_blank" title="Facebook"><img src="../icons/facebook.png" alt="facebook"></a>
+      <a href="https://t.me/Ivanka_Leshko" target="_blank" title="Telegram"><img src="../icons/telegram.png" alt="telegram"></a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-hero">
+      <p class="eyebrow">Косметика та аксесуари</p>
+      <h1>Наш <em style="font-style:italic;color:var(--rose)">Магазин</em></h1>
+      <p>Придбайте косметику та засоби, що використовують наші майстри</p>
+    </div>
+    <div class="breadcrumb">
+      <a href="index.html">Головна</a><span>›</span> Магазин
+    </div>
+
+    <section class="section">
+      <div class="section-header fade-up">
+        <p class="section-label">Популярні товари</p>
+        <h2 class="section-title">Хіти <em>продажів</em></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="cards-grid">
+
+        <div class="card fade-up">
+          <div class="card-img">
+            <img src="data:image/webp;base64,UklGRugXAABXRUJQVlA4INwXAADwZgCdASrbACMBPj0cikOiIaEWmWWoIAPEsrcl+buxwV2ZY8ueYCHYM+fChQQ3wX85XQeb55/x496D5rAR6W/8f6V/R08z/mx/93149DN64n9e9UnzsvW4/z1hlY69zCYk4halnbf559vX9x4by98Av6N3h+pN3/9gD+WeWn/h8ij7d/1/YT/oH9y9GnQ6qKdLT0K0Q1Xy/9NVZHtspMd0IjMFQnCqfyZ4P6cy/y0gKl9hyzuZrmHmNPOgc0nRQ7HbuqVPTApYCnyI3KtigHdXbqgMpfvuTOvAwe89AAvUkm2c0SZq8irJ2dQrQBtVe+wuamY00y7iem4F3sYMAJyej8uQaU+UpjPFN/TGLiJ91DAdWE4JZcdGemWrOy+3E/mattzJliU9AIqONj6x4BE/HfDusoUe3VAH4h2/YczKRg7EnXrLFPI2TTM4A4KvGTvbUa/X5e6o2stDXXasAqebtQ+vyp/pm/G1029H7wCO4SaVL8aMSFe0acTmCoqPPK3+gCbPbSM005p3ciYc25l/PBWIwsxZ7meZfF/FF8g/gyHSFl+3QoictDKQ36+5xkNaUUOi8LF/Zu1UnWUV96WTBOD4j0tuTifCjbBo1+cVUG5fOsEQhY4LDNN2+YPSmy+3KmBYGN5Buo6W7d6xPEUeCCQK1bQbTqR//bdFRco9iFWgaEsVxEic247xPIm++3aMUCbQQPZs4jBNahsQxYrhT+res0GUGlZkrmvhR2YcjyEAmZrOsF/yjhIFJyvDsL+ldLrkTr3WX8tcE8eMXruWdd86SK1RxXnWAe9dt2zAjr6fHKhYqn606+B7AaX8eXtj8NSHTNsTThFvcvaTCSBiE4bwVJhsvf6RxVBuRjN5oAO4KzImsQs4RXwIwPUAmN0PnpceVz1BP/ZveGS6R/Tm7QGovFiAnNXYhTEZsgSnQ3LbVh4NljMP9vS+ip7Xtx9MgaNAXCMekM0gglOTr+pLwYVmqR1gOuU0gyGVFkwsCmyRe2CoSa2aO+SkugKBjLiJ0Ves+VCtGwMEuGtWtyeUGun4y6jyuk1bq9GDTh9FBfwuyh5dVFLexMIJ8bcFt3AbzwEG1U1PaUo37eI1UkwAAP7+mg29hqPljQ9kojg9FFxBT3N4JmzyXNhV6/9WsmumdBRuqImg2qhFqdzz72b+e0AytWFtu7OHlrOsBKz8I93qBtdzkdXPR6+FOe8kbhYQ6W/Qmv16CIAg375sxoZiuasLH04xzkYm3XKMK/xEF4E31p8oSby2V5Tsr9bCqhZoKvub2ppI/26h2weWuTTjF8TB9JS3eoqO8qGNWkgIwAa+IdtAD0qLdqSnx1xbTI7RiRkzDajNuwVn731R9CSGhh4H4gYnaAdJ4/cm/4u6Ot0FUDX+iFolgwDcQ8h0o8wq6rBd755jpcoZUT182AD9FN5pH+NzZ9NH1fK1xBn/nVHwgcYSgn8w+3zDyVU/+sSpAPCh7taTbNWPiEl90AAqkJ7nwdXWdiafMMkJX/j9oqTQpTm156M+7x4cf4RYiVksBc9eRxYZdDkujmfRTs1L7K0Hx8mJZEBU/5nunG3RuN7SoZNxZge2FCHBaHM+R3hkqEIWGig24EXA0UBs9C8LPn5DybwbRLrI3bAdpnsyp0wyTfojiHguhOyQSRHc4jnVcWssGx5q6U8PWFvrnLs3mLvPPo/EKROlltm5UGJuxeG6ipZdjuAbpi3uCYvzOXdomWOcZTiYPvnwmgOTVn+3Ydr7XxCLoqLxsH/r6Wq14KMYLNVt8ZUfo4jXD5KyXjyHrcH1GsXIfNUBIlVyGAvQisJ3jK2KgAAY2mQjzZrXNbWe+49qziXpVjja1Ow1585RLTrcjU+NQ7NvIF0eAd7ommUMmh3AtuuOG5Un5TS/yIb9g3O0/owYwK4c0NPc/YZO3m1byLmnIifJXfK3sOMSW+9AOxorfNDD6SnBNtYBmY9/D9avDw7huNOgpUacbUbqfzUyVslTwbiDX+/OMYLhUg38+EpZRa0rGZpHgT6b/lsUpQT1cZzEDNZ6Fae0cTyP7AZGpIUF4gBxkAdiKVSL5o4QWXTwrj8Nb9SMp4GShaOj26LnMqnVgPLATQYRZr6t0hJBGH2q5TQYy/bFTZpuUH6w8ybhZkIwdYHoR+LmrQqjolS2nl3hNNcRJpkHjRuwSrGSRR56A7ujk9j+nUvI8PeZdPNUxeGoqM81oswEDaRdpmZ79DxE68iGQzr4FmErOZFs3hICVVqZg7w+L9YQTT5EIByBdlSsHmiV5FqZa6EQqalD2AAAFRShmC2AyCx9KWmYHB2fhlvlUDlLpj7vuQZujL/kkgywQwACJKMX9McTat5w2Js+tE/0E9GGNv5s5B4dRxj8yTFh9m2U2BP2AVqr3DpZVhu5DGLzZT3o2NcwMOdWEzOFezXd30EaBJ5E5/05DTWtS3RRa09AtTyK9ZSH2rP9Sp9SWDpnUql+JQHMLECTDCZ2XIY2fiyHg3h3QuwM1BXizyW+Eb4tNl0eYmJ5aQm23hDf0+QOHEXC2YC2dSs1wJ0AZuPV0RIHTR+JehfImwWH4dT49gp4j2UqPTQ/YCUmzge9u8r3t/1D83KHAjx1dgnB9ASryGZwhsjHdKAAngsvmD0inqdOFMLyLZ1BRkHV+gcRIcwR4ZTnBtLjnuSI8LPK70e0i1N7nW/mo68RJd7Zp3NsSd0Rt6RP1qcTQZ/FC7cWwEmGxG6GomjAsfZDM33YJWdyo56XXzi/E9QNWivkg+ZS0VVAgiJjQA+IIkMC2athd6owujaJjAxL2QWHacMVz99vWVsB/ac7ghTVpbOOgjbh2G+66hZp/wSj4cR1Tp759LYbmIkKvgbuZJJ/MJOA1hDp+PXDAkJDqSpUX8gBWv4q23nUAwEqW/5Sx3eqdDdwZSZutQ5QPuizUvP7sYfstzctL5fB08hn+kudCSw3kgbS8RT66bXuKfc/gwcxttjwqVCDt2xJTy2N4BYfTZgIepAdFEkyfPTWwKjrqrYEw5b9aw3H6zrPz6xUCIhUC8Gxprwgf6KLElrRXTDMth60I5rAsb6wfkOVRps/qx4/+BWzC6a3QMoUR2+Lic1oanN3WGjpEPBayBh9pokUMAB4AAFxn9+EkR0zexFCzotZj/yxTu5SuoGduaieLhKmPL2NB5qJKxn+ZlN/XBHwXvmws6MMt26mX7oftELj5Hi+Oh77mOiB0WEvcgsVXU3XsTl+1vIjKFjkE2yLCAAkhvX5IZYMaPv0GExMnVo/sNBRQI91HjIcj0KVlmjSudUYwAKAlPzd8TomdydYA3eUhV3Tm4b3WwWzZorkm3lu7WN0OA1lzEboZmEw2uSGUmrF0/DkH+NU9UJyjKmiMHvhlq278wY9K1GPm2c4jajc19Umz/Jbi8ild0un8s7n0p8lVF7UtpCnV/eCkwCnu1PIVpDqwNZY3xWnnJmXcOJqIgTeJ2fN8QXDuS2Al+YhksEstKUSat8TxR0nVX6NVsmvk3kglTcAniB356AmFoX4PaBYtgYh2uhMw/GZ5CX2AAVv21K++wdztAWTrg/6wwdTOx2Us4lvfzbKdmHWiEdBgAZQkdEAsBxGT/maNJu08XYI25Lkjjt8STnrgDXryxG4fx0Qp05mdlWddEmO7ICGZJpYnIdY+lYfG3u4odm0D2GHl1nu+o5/4P1pBE50FaKlrtR5QELT+vbJinF0NrbpsMcyx4n7/DgA8qAm9RMUSM3c+/NGXBUOaLEXrrV9yGjYrDfaVZDqZHq4J/A8ZR6fKdCJstxTjx0ozFcMMdH93HWyJ51KZT7jxHAFe6e15Memnt7riQHMPGp+kUiReOYWGjkB0j+ePg5nqnHqEeR+X80g4VCNDjNQVscOmejA992vio6oGZdO9v/PE2KaRE6lfw8u7ztF6OgoIAiGlV1Aaa/3y1eO116uuyDMqMlzEFThq6hND230Da99pr8a2fVW3cvujq5oW0ALnB6QwCR5CV7CbZFXu/lHFv2ZH+Uy4CRGh37IsdlOEwc7lRmkOPR1vZvqcR+Bzut6JFNB9Tho0r4NcPmu9nCwq81Eb0UhqFJqfcBhKXD1HHrezmr3MM0Ia9C7LZNYwPsqYOJo1iURKRt2LFecZW8jJvURcNtOFWoMjpAxjXmovHXjkRTkVdTKj4cdlFYN/Xtwwc3X8eLtvusPOPZBKLxhXyyJ6Zv9TiHPTy9rB5fNW5OxcV3L/wr6cUbeLXTXqOBGzueBEmjdohjIbPSrc8EnYJF+mbqccD7aNqMwUmgxXiAqrcUQpdzadAhKZg0+HK+YNm0VVWV9f+DZtFD6DrNtbLbmFdxnFnnlOUm3kQtwPL+V9LxTDLgqp0w8nl48/dILiPbPP/vqzGkms6K8cQxEQbqQGDcWhJ4cUpi2MQo3XFCXFBRA/KAYPw9AAkjdIF56RcTTGSp8Qkf4azurQFXjNJr8HgTApSJg5D5NpGb2sqJuEJWUX8+W0tDyB4UQJNOknPRFOnT5DrxUZaV5++eIBp+7HL0ZUuVrcsyqngwmVHariskJgwPPS4I/51p+GCBy7nhNRDOXMaxbxmzSI4jMYQq5E+tBBz8bMmeQl3ixtLqbDI1bumxju3lagmwPez5gboAXKzjQ9k/JyG/7JiUjqW5LYAHMzmD+IGbZPWjaz9QYZwx/WPlKtggWFDSu21VKQ8Z5U/cx6I+g4ryYCrbKu3tgIK5d7JKn+4ykuVBrqt7qajNRYWxtVcsnyOrvZUjLsHgMJyATZkGiaWcQ4ELmyEeLpjnDYoDOaATUfClStcnc7uOzE7/wIa7o449Xg95B+FK2/HSoFxQLR4P9PHQzii1bZs5Y1CEGFD2SZGGCNZk5JVzmIEWo51vD6DDGD7Wtr5gxQqUXY+lsruWgMQhdEXzEXv4yVqSM0GG88wOJ3JYYw1u5UWHk48cDU5cayfDU2fcKNpe8hc8vaVTjFTosuOfd9CQ6AiswWO+c4ugO6ge/ig5Fifqv84pT1MXCdCmNi9WPbh7wPy7r23nHLzDn8ZBLvsTTng8Tw8J645CNpms0PSiE2COjuCRmLy6p0KwdccIfyR6KwNqFDKBu3kLSOcFy+OT6sx/oYOl24WKfIf8boUHheJkCD77DyhJsuA09jnkjUrlcKV7fFKTVNlkzAD1rLAZZJmxXRe8H85iagBFKD8uT4nG87gbt/quBFkZlDtBdS3R0MH5swtUdhjpSlOZL2JW3tj49Gp/+CtE1C4YN+0ycgU3AFkr2i6ivbIVQ15oVTsMStMVDDbYRKV5OAe/5bsMjo3Gedjw47UDYzZSsj4fRGnQIHJ6LgDkEN3pTEFEnAs5NsN4UjZ4ho+r/sZ8h3GIcmaU8nBKh54ugy1T8ABrGxb7mAzAnyCshH59l9ku06zfOiYUzOqMsTc4siFq9XCOryj30yJkUtw1XnBV235VFtOarWllVged9pD00+qYUtbJV7z0ws+qILAOFkEE3vFwYo5h9un0lFF1TG8BJX/hl19/uj56FjyP57oRUjh9x8Y/qI0fA1yVev/wZY0iPXoBhexbJH851jIuROc7fmWPM0trCJub5K4Dxke/yIMJf03f09if7wFnh2da9GOekGX4nf3eFGNR4s9ze1v8NJ4yHHrqpbA8pNG6W5zYNMTnPb+/9S86ZuLsSxgq4nnhOpqXHpT/E+1f+E92rLCkEViQkZdL/HvJ9Ip2FM/7SrCIOsIseiMQwlygJAOA7FCrPL3O1iPj+hlsv7Ej8DQHvzRGgzmmfMzilB11C4Ko/fSgvvtziHFTucIdXnU8TV/9emTj16co0bHSKE8rv/BM1DHzCLqLIi3Lh8rgj4/iNykD7EuCbLpW6miBuFA4sM0tQpqdOY1/FEd1Bjrttuo0W4RmSL6N00nx0SJSrUzO2Ec/82/UVz/9R4bh7QPKPwg5PXcFjUWTsF3I1wYMQevzHApCso8qrUKIQLgaVj3BtcxK/2Ql6uE+PIA0m1WD8j/OCBOu7wWREjK0JtoF8KPJga+oYfw+2oXYGXqJCoSMK+DNA7GYLk6i7F8p/xhR7cHi9LQiWqkB/DmHDZZFjZu2pn54XKx02Fd+FI4cep8OLhmEuLmahwncnUvmoirOOShcsaTbBvJ+Y8lMFWe0shKS//9gb8P8dVh47H6w4fvZlcUghrp+OL+2w/upGwf4z8EVlOl8dK6YaVK333g6pMQ6kkZpJ5IwhXsTu8GnTKMu3qjhhTf7BNP+c72OftOORwFUyBS+Y3evdvPpROwsrgDtP9XTuTCGGSboLOSs/pa62zV+YJa9tEWA6DDm+WieSSIYGzgJQ9D1+bwc9UMHk4tDbSt4JvRsOKsQ8hsMQGwWjPzbcOz3cxGyGZxe4XktbXaZeiIE/GQxaxDMWHw9NdCALJX8KF6xjINDfbwESc5ipVWQm+YiaFzmUaTQy11NBCFUWa2/nQ1DFh/ana/wiK6shp3Lct7b7N9CPtS4dNAJSapHbF9QkK2qJZRz05LeLmzsipqqO86GbkUb2kFUrc8S1yTyHJGmmJoZ6EKD5TtoQBTkhuylI56LtzGGZJBJtVvoyWJPKZio8cdKRxX2IxqJZD9fc6xc3nDOtDscdTb2nTUW12sxTZDdkEvxu4FiPrpiEjEBtoqt98gjEbnO4akPMeiG07+XS6Giin3gL0j6bYCHg6Z3crHtBN8+i4nW1ajeJuuQxuct4kyr4sB40AJl/MKWrDBjbltdUny/nPpJY9sF8hu1uLRxiwjCY/ck5YCa4+PFji2sgFXNqpg1e7U89bsxlJu42n6lsGRfTWqEJ/e/lHGY8u/O1pcGmBMmH/IkeHJnIbn88Pu+qer7+6ra3aeBIOmcLYJABknX/R4WxFhl4lfZ/3f/+rpiThAY9eUzexL+JFponRrnDA07lun6aLvFVrfkavqD07vBbHB4x9gzNKI6g2Ac1Im883P2q/tKZ6G0dvRAyNDiPdwu6je0w1cBfqWTQdUVzzeqt1cX7yg4kaAB6UzoRY2zE0c+Tlc7W+W5POXpKaqFWHrkxYhiu84GAnmu19/Jrf1Lr1jOe9TW4U+qncY+16Ybg5/s2gwGugIeNAP3KfHaxrXh3SfiVT7qM16EAUSrtGva/JLK4V7BtJpY5MJ1YBDRmdRP7PqwGMxcj6GkBc8OqfRIn99RrxysrIt1ZV9b8dUD0FdbfPFckYF/e5lp+uJEoU93JiMrrenOwJVVqpxny5zGLCuoyzAv7fTNCi7XHHWMob4NkD01Nla7gJSrAVa+V1EZSDTw50AkGn+d+GkEPTxSr1+klVXd2pqBdBZS0tgxapRxVpbmkYG8esEmOaHfg93aW4zAIePD3chSWvELWnyMsBAUB1pO2XAzadaWR4opbJ0U+PTcMER7+ApswWIBEbO80Lc00S3+b6VptZZpaURATTyhwch9ISwUcAEcGbWl24a6AmKiHJWFoxs4kWlmReUpifZOpLCtwRBKVzlDUcCllkTzi3G1v/88/4aKg4iA0gIswBNqzyUgdDqxApjSFzcKwhgX5bD0UetrQdrhPtJEIVA7HecxmEpPAWsIJaVMKQwegcvUGw6prRIq0tksrm5/TQgY0u9uxQOb3z6P8bMLR2zEVKXuvZToBHcmXM5/se+pyAxtGR1z4MhViqVJWuB8f0bIjdyZ66u629cn2rs/czGiW3jDlcYnrd2meOIVsWj1/x7D0pRPOMGgLVF3peE5gOn39QSNdjDyWNzPUPtRQ/KtGY41EFVxKsFandSOHdht9iv36REI8HF2u6yEKPIGJpUQoTsJaMob4me1DMwS/sZIYjXzmspdWZW8+ZMmwQgV7r0msZ56Lu5spSBn3zFRF4X+RZepYNQUw9Ni/YSl+2H4JsTooKofmOuKtWLbhwCbIskmJa5kcxDFMTW06JuiCg5BVD1YPirL67oosJ4YE6l4Ohak8fO3k/LQXF21LyqE7OARZECE4QTqRAwPlYGfUaJZveD9YUkqQPC76rhlG+TRnNk0SEvdnuWICYMkLIxCZGwAyQ606YWezh3OFyHlHSxa/Bgt+0iPi/ZVmajxZ0faLwOb2x5ysOB7Sta+DcSyS2t0HXDLli95FLFhqAQTvNKjj/uFWr9VGRuXR87F1Z0j81CyGaPtf2xq3fgAAAAA=" alt="Помада"/>
+          </div>
+          <div class="card-body">
+            <span class="badge badge-hit">Хіт</span>
+            <p class="card-label">Губи</p>
+            <h3 class="card-title">Матова помада Charlotte Tilbury</h3>
+            <p class="card-text">Розкішна матова помада з тривалим ефектом. Насичений пігмент, зволожуюча формула.</p>
+            <p class="card-price">890 грн</p>
+            <div class="qty-control">
+              <button class="qty-btn" data-action="minus">−</button>
+              <input class="qty-input" type="number" value="1" min="1" max="99"/>
+              <button class="qty-btn" data-action="plus">+</button>
+            </div>
+            <button class="btn btn-primary add-to-cart" style="width:100%">В кошик</button>
+          </div>
+        </div>
+
+        <div class="card fade-up">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&auto=format&fit=crop" alt="Тональний крем"/>
+          </div>
+          <div class="card-body">
+            <span class="badge badge-new">Новинка</span>
+            <p class="card-label">Основа</p>
+            <h3 class="card-title">Тональна основа NARS</h3>
+            <p class="card-text">Легкий тональний крем з SPF захистом. 40 відтінків для будь-якого тону шкіри.</p>
+            <p class="card-price">1 250 грн</p>
+            <div class="qty-control">
+              <button class="qty-btn" data-action="minus">−</button>
+              <input class="qty-input" type="number" value="1" min="1" max="99"/>
+              <button class="qty-btn" data-action="plus">+</button>
+            </div>
+            <button class="btn btn-primary add-to-cart" style="width:100%">В кошик</button>
+          </div>
+        </div>
+
+        <div class="card fade-up">
+          <div class="card-img">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRLZUqHtK-CsYXy3pCiKMx7dLksndRpPb4s2HBQRhC1X6jJzs63myb7BTTeHNGI-I2JzfAQgRNwbCZH3kLrQysbWXfOPETAVVlRW7r-AuD9DrdoehUCza8yzUhkgFE7lipNsE2PGqSJOg&usqp=CAc" alt="Палетка тіней"/>
+          </div>
+          <div class="card-body">
+            <span class="badge badge-sale">-30%</span>
+            <p class="card-label">Очі</p>
+            <h3 class="card-title">Палетка тіней MAC</h3>
+            <p class="card-text">12 відтінків для створення будь-якого образу. Від ніжних до насичених кольорів.</p>
+            <p class="card-price"><span style="text-decoration:line-through;color:var(--light-text);font-size:1rem">1 400 грн</span> 980 грн</p>
+            <div class="qty-control">
+              <button class="qty-btn" data-action="minus">−</button>
+              <input class="qty-input" type="number" value="1" min="1" max="99"/>
+              <button class="qty-btn" data-action="plus">+</button>
+            </div>
+            <button class="btn btn-primary add-to-cart" style="width:100%">В кошик</button>
+          </div>
+        </div>
+
+        <div class="card fade-up">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&auto=format&fit=crop" alt="Туш"/>
+          </div>
+          <div class="card-body">
+            <p class="card-label">Очі</p>
+            <h3 class="card-title">Туш Lancôme Hypnôse</h3>
+            <p class="card-text">Об'ємна туш для вій. Розкішний об'єм без грудочок, стійкість до 24 годин.</p>
+            <p class="card-price">750 грн</p>
+            <div class="qty-control">
+              <button class="qty-btn" data-action="minus">−</button>
+              <input class="qty-input" type="number" value="1" min="1" max="99"/>
+              <button class="qty-btn" data-action="plus">+</button>
+            </div>
+            <button class="btn btn-primary add-to-cart" style="width:100%">В кошик</button>
+          </div>
+        </div>
+
+        <div class="card fade-up">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=600&auto=format&fit=crop" alt="Крем для обличчя"/>
+          </div>
+          <div class="card-body">
+            <span class="badge badge-hit">Хіт</span>
+            <p class="card-label">Догляд</p>
+            <h3 class="card-title">Крем для обличчя La Mer</h3>
+            <p class="card-text">Розкішний зволожуючий крем. Відновлює та зміцнює шкіру, надаючи їй сяючий вигляд.</p>
+            <p class="card-price">3 200 грн</p>
+            <div class="qty-control">
+              <button class="qty-btn" data-action="minus">−</button>
+              <input class="qty-input" type="number" value="1" min="1" max="99"/>
+              <button class="qty-btn" data-action="plus">+</button>
+            </div>
+            <button class="btn btn-primary add-to-cart" style="width:100%">В кошик</button>
+          </div>
+        </div>
+
+        <div class="card fade-up">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=600&auto=format&fit=crop" alt="Набір пензлів"/>
+          </div>
+          <div class="card-body">
+            <p class="card-label">Аксесуари</p>
+            <h3 class="card-title">Набір пензлів для макіяжу</h3>
+            <p class="card-text">Професійний набір із 12 пензлів для повного макіяжу. Натуральний та синтетичний ворс.</p>
+            <p class="card-price">1 100 грн</p>
+            <div class="qty-control">
+              <button class="qty-btn" data-action="minus">−</button>
+              <input class="qty-input" type="number" value="1" min="1" max="99"/>
+              <button class="qty-btn" data-action="plus">+</button>
+            </div>
+            <button class="btn btn-primary add-to-cart" style="width:100%">В кошик</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Таблиця порівняння продуктів -->
+    <section class="section section-smoke">
+      <div class="section-header fade-up">
+        <p class="section-label">Порівняння</p>
+        <h2 class="section-title">Порівняння <em>помад</em></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="fade-up" style="overflow-x:auto">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Характеристика</th>
+              <th>Charlotte Tilbury</th>
+              <th>MAC Ruby Woo</th>
+              <th>NARS Velvet</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Формула</td><td>Матова, зволожуюча</td><td>Матова, стійка</td><td>Оксамитова</td></tr>
+            <tr><td>Стійкість</td><td>До 12 годин</td><td>До 10 годин</td><td>До 8 годин</td></tr>
+            <tr><td>Пігментація</td><td>Висока</td><td>Дуже висока</td><td>Висока</td></tr>
+            <tr><td>Догляд</td><td> Є</td><td>—</td><td> Є</td></tr>
+            <tr><td>Ціна</td><td>890 грн</td><td>720 грн</td><td>980 грн</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Гіперпосилання на бренди -->
+    <section class="section">
+      <div class="section-header fade-up">
+        <p class="section-label">Наші постачальники</p>
+        <h2 class="section-title">Офіційні <em>бренди</em></h2>
+        <div class="section-line"></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center" class="fade-up">
+        <a href="https://www.charlottetilbury.com" target="_blank" class="btn btn-outline">Charlotte Tilbury ↗</a>
+        <a href="https://www.maccosmetics.com" target="_blank" class="btn btn-outline">MAC Cosmetics ↗</a>
+        <a href="https://www.narscosmetics.com" target="_blank" class="btn btn-outline">NARS ↗</a>
+        <a href="https://www.lancome.com" target="_blank" class="btn btn-outline">Lancôme ↗</a>
+        <a href="https://www.cremedelamer.com" target="_blank" class="btn btn-outline">La Mer ↗</a>
+        <a href="https://www.fentybeauty.com" target="_blank" class="btn btn-outline">Fenty Beauty ↗</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="logo">Leshko Studio</p>
+          <p>Преміум салон краси у серці Стрия. Ми створюємо образи, що надихають і залишаються в пам'яті.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Послуги</h4>
+          <ul>
+            <li><a href="./services.html">Денний макіяж</a></li>
+            <li><a href="./services.html">Вечірній макіяж</a></li>
+            <li><a href="./services.html">Весільний макіяж</a></li>
+            <li><a href="./services.html">Догляд за шкірою</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Навігація</h4>
+          <ul>
+            <li><a href="./about.html">Про нас</a></li>
+            <li><a href="./gallery.html">Галерея</a></li>
+            <li><a href="./team.html">Майстри</a></li>
+            <li><a href="./blog.html">Блог</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Контакти</h4>
+          <ul>
+            <li><a href="tel:+380441234567">+38 (050) 715-33-79</a></li>
+            <li><a href="mailto:info@leshkotudio.ua">info@leshkostudio.ua</a></li>
+            <li><a href="#">вул. Коцюбинського, 53, Стрий</a></li>
+            <li><a href="./contact.html">Написати нам</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Leshko Studio. Всі права захищено.</p>
+        <p>Розроблено з ❤ для краси</p>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<div id="lightbox" class="lightbox"><button class="lightbox-close">✕</button><img src="" alt=""/></div>
+<button class="scroll-top">↑</button>
+<div id="notification" class="notification"></div>
+<div id="cookieBanner" class="cookie-banner">
+  <p>Ми використовуємо <a href="#">cookie</a>.</p>
+  <button id="cookieAccept" class="btn btn-primary" style="padding:8px 20px">Прийняти</button>
+</div>
+<script src="../main.js"></script>
+</body>
+</html>
